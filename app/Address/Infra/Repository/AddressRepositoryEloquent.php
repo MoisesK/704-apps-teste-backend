@@ -25,7 +25,7 @@ class AddressRepositoryEloquent implements AddressRepository
 
     public function delete(Address $address): void
     {
-        // TODO: Implement delete() method.
+        AddressModel::destroy($address->id);
     }
 
     public function getByField(string $field, mixed $value): ?Address
@@ -50,5 +50,10 @@ class AddressRepositoryEloquent implements AddressRepository
         $record->zip_code = $address->zipCode;
 
         $record->save();
+    }
+
+    public function getAllAddresses(): array
+    {
+        return AddressModel::all()->toArray();
     }
 }

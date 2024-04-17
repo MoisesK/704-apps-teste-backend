@@ -10,6 +10,7 @@ interface AddressRepository
 
     public function delete(Address $address): void;
     public function getByField(string $field, mixed $value): ?Address;
+    public function getAllAddresses(): array;
 
     public function update(Address $address): void;
 }
