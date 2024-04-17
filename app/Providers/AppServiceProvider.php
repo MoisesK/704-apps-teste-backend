@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Address\Domain\Repository\AddressRepository;
+use App\Address\Infra\Repository\AddressRepositoryEloquent;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(AddressRepository::class, AddressRepositoryEloquent::class);
     }
 
     /**

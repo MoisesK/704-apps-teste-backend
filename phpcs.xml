@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ruleset
-    name="MMLProject"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"
+        name="MMLProject"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd"
 >
     <description>MMLProject Standard</description>
     <arg name="colors"/>
